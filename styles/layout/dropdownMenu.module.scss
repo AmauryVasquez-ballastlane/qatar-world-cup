@@ -1,0 +1,61 @@
+@keyframes scaleDownKeyframes {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes scaleUpKeyframes {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+
+ul.hidden {
+  display: none;
+}
+
+@mixin dropdownMenu() {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+ul.navigationMenu {
+  @include dropdownMenu();
+  transform-origin: top;
+  animation: 0.5s scaleDownKeyframes ease;
+}
+
+a.navigationItem {
+  width: 100%;
+  height: 50px;
+  background: var(--white);
+  border-bottom: 1px solid #eee;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--violet);
+
+  &:hover {
+    transition: 0.5s;
+    background: rgba($color: #eee, $alpha: 0.8);
+  }
+}
+
+ul.closeMenu {
+  @include dropdownMenu();
+  transform-origin: top;
+  animation: 0.4s scaleUpKeyframes ease;
+}

@@ -1,0 +1,43 @@
+@import 'animation';
+
+span.team {
+  @include fadeIn();
+  height: 50px;
+  width: 100%;
+  background: var(--white);
+  color: var(--violet);
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 15px 10px;
+
+  svg {
+    height: 100%;
+    width: auto;
+    left: 0;
+    margin-right: 10px;
+  }
+}
+
+@keyframes skeletonKeyframes {
+  to {
+    background-position: 800px;
+  }
+}
+
+span.loading {
+  // background-repeat: repeat;
+  // background-size: 500px;
+  background-size: 1600px;
+  background-position: -800px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.8) 0%,
+    var(--white) 75%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  animation: 1s skeletonKeyframes infinite;
+  --webkit-animation: 1s skeletonKeyframes infinite;
+}

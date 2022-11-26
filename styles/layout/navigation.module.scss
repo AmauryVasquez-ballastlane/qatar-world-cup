@@ -1,0 +1,47 @@
+menu.groupsNavigation {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+}
+
+button.navMenuButton {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border-bottom: 1px solid #eee;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--violet);
+  cursor: pointer;
+
+  &:hover {
+    transition: all 0.5s;
+    background: rgba($color: #ddd, $alpha: 0.2);
+  }
+}
+
+div.dropDownIcon {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  i {
+    position: absolute;
+    left: 5px;
+    top: 13px;
+    border: solid var(--violet);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    --webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    padding: 3px;
+  }
+}

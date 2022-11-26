@@ -1,0 +1,13 @@
+@import '../animation';
+
+div.layout {
+  @include fadeIn();
+  height: auto;
+  width: 100vw;
+}
+
+div.content {
+  padding: 30px;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
